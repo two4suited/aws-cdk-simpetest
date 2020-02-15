@@ -1,4 +1,5 @@
 using Amazon.CDK;
+using Amazon.CDK.AWS.SQS;
 
 namespace Infrastructure
 {
@@ -6,7 +7,10 @@ namespace Infrastructure
     {
         internal InfrastructureStack(Construct scope, string id, IStackProps props = null) : base(scope, id, props)
         {
-            //  The code that defines your stack goes here
+            var queue = new Queue(this,"test",new QueueProps()
+                {
+                    QueueName = "TestQueue"
+                });
         }
     }
 }
