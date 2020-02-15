@@ -8,7 +8,7 @@ jobs:
     steps:
       - name: cdk synth
         id: synth
-        uses: two4suited/aws-cdk-dotnet-github-action
+        uses: two4suited/aws-cdk-dotnet-github-action@master
         with:
           cdk_subcommand: 'synth'
           actions_comment: true
